@@ -1,0 +1,4 @@
+# Fireworks Demo
+
+A demonstration of using the new `SpiteView` in SwiftUI.  Using combine to create a timer publisher that randomly explodes fireworks (SKEmitterNode)s in the view.
+
