@@ -49,9 +49,13 @@ struct ContentView: View {
   @StateObject var viewModel = FireworksViewModel()
 
   var body: some View {
-    GeometryReader { proxy in
-      SpriteView(scene: viewModel.fireworks(size: proxy.size))
-        .frame(width: proxy.size.width, height: proxy.size.height)
+    ZStack {
+      GeometryReader { proxy in
+        SpriteView(scene: viewModel.fireworks(size: proxy.size))
+          .frame(width: proxy.size.width, height: proxy.size.height)
+      }
+      Text("Happy 4th!").font(.largeTitle)
+        .foregroundColor(.white).bold()
     }
     .edgesIgnoringSafeArea(.all)
     .onAppear {
